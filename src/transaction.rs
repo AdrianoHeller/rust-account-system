@@ -1,4 +1,4 @@
-use crate::Hash;
+use crate::{Associate, Hash};
 
 #[derive(Debug)]
 pub enum PaymentMethod {
