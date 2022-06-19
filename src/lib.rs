@@ -15,3 +15,8 @@ pub trait Hash {
         println!("{:?}",random_string)
     }
 }
+
+pub trait Associate<'a,T> {
+    fn associate_to(&self,to_associate: &'a T) -> ();
+    fn unassociate_from(&self,to_unassociate: &'a T) -> ();
+}
