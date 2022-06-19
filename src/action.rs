@@ -18,7 +18,7 @@ pub struct Action<'a> {
 }
 
 impl<'a> Action<'a> {
-    pub fn new(action_type: &'a ActionType,entity: &'a ActionEntity,entity_ref: &'a str) -> Action {
+    pub fn new(action_type: &'a ActionType,entity: &'a ActionEntity,entity_ref: &'a str) -> Action<'a> {
         Action {
             action_type,
             entity,
