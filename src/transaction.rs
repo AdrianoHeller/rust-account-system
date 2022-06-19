@@ -1,3 +1,5 @@
+use crate::Hash;
+
 #[derive(Debug)]
 pub enum PaymentMethod {
     DebitCard,
@@ -22,6 +24,8 @@ impl Clone for Transaction<'_> {
         *self
     }
 }
+
+impl Hash for Transaction<'_> {}
 
 impl<'a> Transaction<'a> {
     pub fn new(id: &'a str,value: &'a f64,payment_method: &'a PaymentMethod, card_number: &'a str,card_holder: &'a str,good_thru: &'a str,cvv: &'a str) -> Transaction<'a> {
